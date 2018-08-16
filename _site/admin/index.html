@@ -11,7 +11,7 @@
 
     <title>Tomas Ondrias - Admin</title>
 
-    <link rel="canonical" href="http://tomasondrias.com/jekyll-test/admin/">
+    <link rel="canonical" href="https://doritodog.github.io/jekyll-test/admin/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -105,7 +105,7 @@
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<h3 class="text-center">Schedule - pridat concert</h3>
 <div class="form-group">
-  <form action="" method="post">
+  <form action="admin.rb" method="post">
     <label for="date">Datum</label>
     <input type="text" class="form-control" id="date">
 
@@ -133,6 +133,7 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     jsonBefore = this.responseText;
+    alert(jsonBefore);
   }
 };
 xhttp.open("GET", "/jekyll-test/json/new_schedule.json", true);
